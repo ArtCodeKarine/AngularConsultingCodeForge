@@ -1,0 +1,26 @@
+.popup-confirm {
+  padding: 16px;
+}
+
+.popup-confirm-title {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  mat-icon {
+    font-size: 24px;
+    margin-right: 16px;
+    color: var(--icon-color-warning);
+  }
+}
+
+.popup-confirm-message {
+  margin-top: 8px;
+}
+
+.popup-confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}

@@ -4,3 +4,4 @@
 .angular
 **/lcov-report/**/*
 .gitlab-ci.yml
+/src/styles/variables.scss

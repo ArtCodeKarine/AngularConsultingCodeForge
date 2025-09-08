@@ -1,0 +1,42 @@
+@use '@angular/material' as mat;
+@use './customStyles.scss' as *;
+
+:root {
+  // Typography
+  --typography-font-color-default: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-portail-custom, 600))};
+  --typography-font-color-light: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-portail-custom, 100))};
+
+  // Spinner
+  --spinner-background-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-portail-custom, 100))};
+  --spinner-color: #{mat.m2-get-color-from-palette($mat-portail-custom, 200)};
+
+  // Icon
+  --icon-color-default: #{mat.m2-get-color-from-palette($mat-portail-custom, 800)};
+  --icon-color-light: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-portail-custom, 100))};
+  --icon-color-unknown: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-portail-custom, 300))};
+  --icon-color-info: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-portail-custom, 900))};
+  --icon-color-warning: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-warn, 700))};
+  --icon-color-error: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-danger, 500))};
+  --icon-color-success: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-success), 700)};
+
+  // Notification
+  --notification-success-background-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-success, 100))};
+  --notification-success-border-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-success, 500))};
+  --notification-success-text-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-success, 500))};
+  --notification-success-progress-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-success, 700))};
+
+  --notification-error-background-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-danger, 100))};
+  --notification-error-border-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-danger, 500))};
+  --notification-error-text-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-danger, 500))};
+  --notification-error-progress-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-danger, 700))};
+
+  --notification-warning-background-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-warn, 100))};
+  --notification-warning-border-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-warn, 500))};
+  --notification-warning-text-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-warn, 500))};
+  --notification-warning-progress-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-warn, 700))};
+
+  --notification-info-background-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-portail-custom, 100))};
+  --notification-info-border-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-portail-custom, 700))};
+  --notification-info-text-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-portail-custom, 700))};
+  --notification-info-progress-color: #{mat.m2-get-color-from-palette(mat.m2-define-palette($mat-portail-custom, 900))};
+}

@@ -1,0 +1,16 @@
+<div class="snack-bar">
+  <mat-progress-bar
+    mode="determinate"
+    [value]="100 - $progressTimer()"
+    class="progress-bar"
+  ></mat-progress-bar>
+  <span class="snack-bar-message" matSnackBarLabel>
+    <mat-icon class="icon-display" [fontIcon]="iconMap[data.type]"></mat-icon>
+    <span>
+      {{ data.message | translate }}
+    </span>
+  </span>
+  <span matSnackBarActions>
+    <button mat-button matSnackBarAction (click)="snackBarRef.dismissWithAction()">X</button>
+  </span>
+</div>

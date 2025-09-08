@@ -1,0 +1,96 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+.snack-bar {
+  display: inline-flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+
+  mat-progress-bar {
+    position: absolute !important;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+}
+
+.mat-mdc-snackbar-surface {
+  padding: 0;
+}
+
+.progress-bar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.snack-bar-message {
+  border-left-width: 6px;
+  border-left-style: solid;
+  border-left-color: #da7312;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+  .icon-display {
+    transform: scale(0.8);
+  }
+}
+
+$themes: (
+  'success': (
+    'background-color': var(--notification-success-background-color),
+    'border-color': var(--notification-success-border-color),
+    'text-color': var(--notification-success-text-color),
+    'progress-color': var(--notification-success-progress-color),
+  ),
+  'error': (
+    'background-color': var(--notification-error-background-color),
+    'border-color': var(--notification-error-border-color),
+    'text-color': var(--notification-error-text-color),
+    'progress-color': var(--notification-error-progress-color),
+  ),
+  'warning': (
+    'background-color': var(--notification-warning-background-color),
+    'border-color': var(--notification-warning-border-color),
+    'text-color': var(--notification-warning-text-color),
+    'progress-color': var(--notification-warning-progress-color),
+  ),
+  'info': (
+    'background-color': var(--notification-info-background-color),
+    'border-color': var(--notification-info-border-color),
+    'text-color': var(--notification-info-text-color),
+    'progress-color': var(--notification-info-progress-color),
+  ),
+);
+
+@each $theme, $properties in $themes {
+  .snack-bar-#{$theme} {
+    .snack-bar-message {
+      border-left-width: 6px;
+      border-left-style: solid;
+      border-left-color: map.get($properties, 'border-color');
+    }
+
+    @include mat.snack-bar-overrides(
+      (
+        container-color: map.get($properties, 'background-color'),
+        supporting-text-color: map.get($properties, 'text-color'),
+        button-color: map.get($properties, 'text-color'),
+      )
+    );
+  }
+  .snack-bar-container-#{$theme} {
+    .progress-bar {
+      background-color: map.get($properties, 'background-color');
+    }
+    .mdc-linear-progress__bar-inner {
+      border-color: map.get($properties, 'progress-color');
+    }
+  }
+}

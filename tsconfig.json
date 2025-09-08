@@ -23,7 +23,10 @@
     "useDefineForClassFields": false,
     "paths": {
       "@shared/translation": ["src/app/shared/utils/translation/index.ts"],
-      "@mocks": ["src/mocks/index.ts"]
+      "@mocks": ["src/mocks/index.ts"],
+      "@shared-utils/data": ["src/app/shared/utils/data/index.ts"],
+      "@shared-utils/date": ["src/app/shared/utils/date/index.ts"],
+      "@shared-design": ["src/app/shared/design/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

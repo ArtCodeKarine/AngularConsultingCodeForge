@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Periode } from '@shared/utils-data';
+import { Periode } from '@shared-utils/data';
 import { format, lastDayOfMonth, startOfMonth } from 'date-fns';
 
 export const DATE_FORMAT = 'yyyy-MM-dd';
