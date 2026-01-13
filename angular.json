@@ -18,14 +18,24 @@
           "builder": "@angular/build:application",
           "options": {
             "outputPath": "dist/code-forge",
-            "allowedCommonJsDependencies": ["lodash", "miragejs"],
+            "allowedCommonJsDependencies": [
+              "lodash",
+              "miragejs"
+            ],
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": ["zone.js"],
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/assets"],
-            "styles": ["src/styles/styles.scss", "src/styles/customStyles.scss"],
+            "assets": [
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles/styles.scss",
+              "src/styles/customStyles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -80,18 +90,47 @@
           "builder": "@angular-builders/jest:run",
           "options": {
             "configPath": "./jest.config.ts",
-            "polyfills": ["zone.js", "zone.js/testing"],
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": []
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": ".storybook",
+            "browserTarget": "code-forge:build",
+            "compodoc": false,
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": ".storybook",
+            "browserTarget": "code-forge:build",
+            "compodoc": false,
+            "outputDir": "storybook-static"
           }
         }
       }
