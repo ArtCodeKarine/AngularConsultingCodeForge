@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -11,7 +10,7 @@ import {
 
 @Component({
   selector: 'app-design-loader',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './design-loader.component.html',
   styleUrl: './design-loader.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

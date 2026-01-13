@@ -6,7 +6,6 @@
     "strictInjectionParameters": true
   },
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "baseUrl": "./",
     "rootDir": "./",
@@ -16,7 +15,7 @@
     "declaration": false,
     "experimentalDecorators": true,
     "module": "es2020",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
     "lib": ["es2020", "dom"],

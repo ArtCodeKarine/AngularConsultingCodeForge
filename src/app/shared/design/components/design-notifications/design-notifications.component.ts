@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -32,7 +31,6 @@ import { DesignNotification, DesignNotificationType } from './models/notificatio
     MatSnackBarAction,
     TranslateModule,
     MatProgressBarModule,
-    CommonModule,
     MatIconModule,
   ],
   templateUrl: './design-notifications.component.html',

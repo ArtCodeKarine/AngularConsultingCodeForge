@@ -8,9 +8,8 @@ describe('PageDashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PageDashboardComponent]
-    })
-    .compileComponents();
+      imports: [PageDashboardComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PageDashboardComponent);
     component = fixture.componentInstance;
